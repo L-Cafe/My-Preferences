@@ -1,0 +1,12 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/base16-solarized-light (SL).tmTheme",
+	"font_face": "Source Code Pro",
+	"font_size": 15,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"phoenix_dirty_bottom_bar": false,
+	"tabs_small": true,
+	"theme": "Soda Light 3.sublime-theme"
+}
