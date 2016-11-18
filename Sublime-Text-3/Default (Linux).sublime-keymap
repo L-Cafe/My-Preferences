@@ -1,0 +1,9 @@
+[
+	{ "keys": ["alt+,"], "command": "noop"},
+	{ "keys": ["alt+,", "alt+f"], "command": "toggle_full_screen" },
+	{ "keys": ["alt+,", "alt+d"], "command": "toggle_distraction_free"},
+	{ "keys": ["alt+,", "alt+t"], "command": "solarized_toggle"},
+	{ "keys": ["alt+,", "alt+s"], "command": "auto_save" },
+	{ "keys": ["alt+,", "alt+b"], "command": "toggle_side_bar" },
+	{ "keys": ["alt+,", "alt+m"], "command": "toggle_menu" }
+]
