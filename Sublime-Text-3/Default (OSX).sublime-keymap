@@ -1,8 +1,12 @@
 [
 	{ "keys": ["super+,"], "command": "noop"},
-	{ "keys": ["super+,", "super+f"], "command": "toggle_full_screen" },
-	{ "keys": ["super+,", "super+d"], "command": "toggle_distraction_free"},
-	{ "keys": ["super+,", "super+t"], "command": "solarized_toggle"},
-	{ "keys": ["super+,", "super+s"], "command": "auto_save" },
-	{ "keys": ["super+,", "super+b"], "command": "toggle_side_bar" }
+	{ "keys": ["super+,", "f"], "command": "toggle_full_screen" },
+	{ "keys": ["super+,", "d"], "command": "toggle_distraction_free"},
+	{ "keys": ["super+,", "t"], "command": "solarized_toggle"},
+	{ "keys": ["super+,", "s"], "command": "auto_save" },
+	{ "keys": ["super+,", "b"], "command": "toggle_side_bar" },
+	{ "keys": ["super+,", "t"], "command": "open_terminal" },
+	{ "keys": ["super+,", "f"], "command": "open_terminal_project_folder" },
+	{ "keys": ["super+,", "c"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["super+,", "r"], "command": "rubocop_pause_toggle"}
 ]
