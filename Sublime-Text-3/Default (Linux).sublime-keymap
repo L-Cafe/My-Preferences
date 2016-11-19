@@ -5,5 +5,9 @@
 	{ "keys": ["alt+,", "alt+t"], "command": "solarized_toggle"},
 	{ "keys": ["alt+,", "alt+s"], "command": "auto_save" },
 	{ "keys": ["alt+,", "alt+b"], "command": "toggle_side_bar" },
-	{ "keys": ["alt+,", "alt+m"], "command": "toggle_menu" }
+	{ "keys": ["alt+,", "alt+m"], "command": "toggle_menu" },
+	{ "keys": ["alt+,", "alt+t"], "command": "open_terminal" },
+	{ "keys": ["alt+,", "alt+f"], "command": "open_terminal_project_folder" },
+	{ "keys": ["alt+,", "alt+c"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["alt+,", "alt+r"], "command": "rubocop_pause_toggle"}
 ]
