@@ -5,9 +5,8 @@
 	{ "keys": ["super+,", "t"], "command": "solarized_toggle"},
 	{ "keys": ["super+,", "s"], "command": "auto_save" },
 	{ "keys": ["super+,", "b"], "command": "toggle_side_bar" },
-	{ "keys": ["super+,", "t"], "command": "open_terminal" },
-	{ "keys": ["super+,", "f"], "command": "open_terminal_project_folder" },
+	{ "keys": ["super+,", "y"], "command": "open_terminal" },
+	{ "keys": ["super+,", "u"], "command": "open_terminal_project_folder" },
 	{ "keys": ["super+,", "c"], "command": "toggle_comment", "args": { "block": false } },
-	{ "keys": ["super+,", "r"], "command": "rubocop_pause_toggle"},
-	{ "keys": ["super+,", "e"], "command": "reindent"}
+	{ "keys": ["super+,", "r"], "command": "reindent"}
 ]
