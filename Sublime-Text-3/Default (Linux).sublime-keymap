@@ -9,6 +9,5 @@
 	{ "keys": ["alt+,", "t"], "command": "open_terminal" },
 	{ "keys": ["alt+,", "y"], "command": "open_terminal_project_folder" },
 	{ "keys": ["alt+,", "c"], "command": "toggle_comment", "args": { "block": false } },
-	{ "keys": ["alt+,", "r"], "command": "rubocop_pause_toggle"},
-	{ "keys": ["alt+,", "e"], "command": "reindent"}
+	{ "keys": ["alt+,", "r"], "command": "reindent"}
 ]
