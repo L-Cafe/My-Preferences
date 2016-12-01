@@ -1,6 +1,6 @@
 [
 	{ "keys": ["super+,"], "command": "noop"},
-	{ "keys": ["super+,", "f"], "command": "toggle_full_screen" },
+	{ "keys": ["ctrl+super+f"], "command": "toggle_full_screen" },
 	{ "keys": ["super+,", "d"], "command": "toggle_distraction_free"},
 	{ "keys": ["super+,", "t"], "command": "solarized_toggle"},
 	{ "keys": ["super+,", "s"], "command": "auto_save" },
