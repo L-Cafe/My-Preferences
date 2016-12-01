@@ -1,7 +1,7 @@
 [
-	{ "keys": ["super+,"], "command": "noop"},
 	{ "keys": ["ctrl+super+f"], "command": "toggle_full_screen" },
-	{ "keys": ["super+,", "d"], "command": "toggle_distraction_free"},
+	{ "keys": ["ctrl+super+d"], "command": "toggle_distraction_free"},
+	{ "keys": ["super+,"], "command": "noop"},
 	{ "keys": ["super+,", "t"], "command": "solarized_toggle"},
 	{ "keys": ["super+,", "s"], "command": "auto_save" },
 	{ "keys": ["super+,", "b"], "command": "toggle_side_bar" },
