@@ -9,6 +9,7 @@ set nocompatible
 filetype off
 syntax enable
 nnoremap Q <nop> "disables ex mode
+let mapleader = ","
 
 "gui settings
 set guifont=InconsolataForPowerline\ Nerd\ Font:h14
@@ -62,10 +63,8 @@ Plugin 'L-Cafe/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/Gundo'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-abolish'
 Plugin 'ujihisa/vimshell-ssh'
@@ -76,6 +75,11 @@ Plugin 'vim-scripts/CycleColor'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin '907th/vim-auto-save'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'wincent/command-t'
+Plugin 'wikitopian/hardmode'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'mbbill/undotree'
+"Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end() " required
@@ -89,7 +93,10 @@ else
 endif
 
 "Key bindings
-map ,t :ToggleBG
+nnoremap <leader>s :ToggleBG<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+nnoremap <leader>u :UndotreeToggle<cr>
 
 "Theme
 colorscheme solarized
@@ -97,17 +104,26 @@ let g:solarized_contrast="normal"    "default value is normal
 let g:solarized_bold=1
 call togglebg#map("") "fixes Solarized erratic behaviour
 
+"markdown
+let g:vim_markdown_math = 1
+
 "Powerline (Airline)
 set laststatus=2 "forces powerline
 let g:airline_powerline_fonts = 1 "requires a powerline compatible font
 
 "NERDTree
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd vimenter * NERDTree "enable to automatically open NERDTree
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"undotree
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endif
 
 "autosave
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 
-"markdown
-let g:vim_markdown_math = 1
+"hard mode
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
