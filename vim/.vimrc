@@ -15,6 +15,7 @@ let mapleader = ","
 set guifont=InconsolataForPowerline\ Nerd\ Font:h14
 set guioptions=
 set linespace=1
+set termguicolors
 
 "font
 set cursorline
@@ -47,11 +48,13 @@ set cursorline cursorcolumn
 set list
 set listchars=eol:⤶,tab:⌁⌁,extends:>,precedes:<
 set showbreak=…
+set colorcolumn=80
 
 "folding
 set foldmethod=syntax
 set nofoldenable
 
+"vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -79,7 +82,9 @@ Plugin 'wincent/command-t'
 Plugin 'wikitopian/hardmode'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'mbbill/undotree'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'morhetz/gruvbox'
+Plugin 'mattn/emmet-vim'
+Plugin 'zanglg/nova.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end() " required
@@ -93,10 +98,14 @@ else
 endif
 
 "Key bindings
-nnoremap <leader>s :ToggleBG<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>t :ToggleBG<CR>
+nnoremap <leader>b :NERDTreeToggle<CR>
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
-nnoremap <leader>u :UndotreeToggle<cr>
+nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>m :CycleColorNext<CR>
+nnoremap <leader>. :CycleColorPrev<CR>
+nnoremap <leader>p :CommandT<CR>
+nnoremap <leader>o :CommandTFlush<CR>
 
 "Theme
 colorscheme solarized
