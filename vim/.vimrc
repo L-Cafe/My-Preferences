@@ -2,7 +2,7 @@
 scriptencoding utf-8
 set encoding=utf-8
 set fileencodings=utf-8
-filetype plugin indent off
+filetype off
 
 "fixes
 set nocompatible
