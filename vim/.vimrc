@@ -12,12 +12,6 @@ nnoremap Q <nop> "disables ex mode
 let mapleader = ","
 let g:mapleader = ","
 
-"gui settings
-set guifont=InconsolataForPowerline\ Nerd\ Font:h14
-set guioptions=
-set linespace=1
-set termguicolors
-
 "font
 set cursorline
 
@@ -38,15 +32,11 @@ set ignorecase
 set smartcase
 set incsearch
 set noswapfile
-
-" highlight current line
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+autocmd BufEnter * silent! lcd %:p:h
 
 "invisibles
 set list
-set listchars=tab:⌁⌁,extends:>,precedes:<
+"set listchars=tab:⌁⌁,extends:>,precedes:<
 set showbreak=…
 set colorcolumn=80
 
@@ -72,9 +62,9 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'terryma/vim-multiple-cursors'
 Plugin '907th/vim-auto-save'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'wincent/command-t'
-Plugin 'wikitopian/hardmode'
-Plugin 'sheerun/vim-polyglot'
+Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'wikitopian/hardmode'
+"Plugin 'sheerun/vim-polyglot'
 "Plugin 'mbbill/undotree'
 Plugin 'morhetz/gruvbox'
 Plugin 'wting/rust.vim'
@@ -86,54 +76,33 @@ filetype indent on
 
 "Toggle dark and light
 let hour = strftime("%H")
-if 8 <= hour && hour < 18
+if 8 <= hour && hour < 20
   set background=light
 else
   set background=dark
 endif
 
 "Key bindings
-nnoremap <leader>t :ToggleBG<CR>
 nnoremap <leader>b :NERDTreeToggle<CR>
-"nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>p :CommandT<CR>
 nnoremap <leader>o :CommandTFlush<CR>
-nmap <leader>w :w!<cr>
+map <leader>t :let &background = ( &background == "dark"? "light" : "dark" )<CR> "toggle background
 
-"Theme
-colorscheme gruvbox
-"Theme settings
-let g:gruvbox_contrast_dark=hard
-let g:gruvbox_contrast_light=hard
-nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
-nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
-nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
-
-nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
-nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
-nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
-call togglebg#map("") "fixes Solarized erratic behaviour
-
-"markdown
-let g:vim_markdown_math = 1
-
-"Powerline (Airline)
-set laststatus=2 "forces powerline
-let g:airline_powerline_fonts = 1 "requires a powerline compatible font
-
-"NERDTree
-"autocmd vimenter * NERDTree "enable to automatically open NERDTree
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-"undotree
-if has("persistent_undo")
-    set undodir=~/.undodir/
-    set undofile
-endif
-
+""Other settings
 "autosave
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
+"Airline
+let g:airline_powerline_fonts = 1
 
-"hard mode
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+if has("gui_vimr")
+"GUI Settings
+"set guifont=InconsolataForPowerline\ Nerd\ Font:h14
+set linespace=1
+set termguicolors
+"Theme
+colorscheme gruvbox
+"Theme settings
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
+endif
