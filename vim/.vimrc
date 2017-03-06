@@ -86,8 +86,7 @@ endif
 nnoremap <leader>b :NERDTreeToggle<CR>
 nnoremap <leader>p :CommandT<CR>
 nnoremap <leader>o :CommandTFlush<CR>
-map <leader>t :let &background = ( &background == "dark"? "light" : "dark" )<CR> "toggle background
-
+map <leader>t :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 ""Other settings
 "autosave
 let g:auto_save = 1
