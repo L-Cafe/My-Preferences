@@ -51,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails sublime xcode vundle thefuck tig swift rust ruby rvm rake-fast osx pod npm emotty extract encode64 docker cargo brew bundler battery wd)
+plugins=(git rails sublime xcode vundle thefuck tig swift rust ruby rvm rake-fast osx pod npm emotty extract encode64 docker cargo brew bundler battery wd brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,3 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias bcu="brew cask list | xargs brew cask install --force"
+alias bu="brew update && brew upgrade"
+wd list
