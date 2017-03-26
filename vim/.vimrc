@@ -34,8 +34,8 @@ autocmd BufEnter * silent! lcd %:p:h
 
 "invisibles
 set list
-"set listchars=tab:⌁⌁,extends:>,precedes:<
 set showbreak=…
+set listchars=trail:□,tab:→\
 set colorcolumn=80
 
 "folding
@@ -82,29 +82,10 @@ endif
 "Key bindings
 nnoremap <leader>b :NERDTreeToggle<CR>
 nnoremap <leader>p :CtrlP<CR>
-nnoremap <leader>t :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 ""Other settings
 "autosave
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 "Airline
 let g:airline_powerline_fonts = 1
-
-"GUI Settings
-if has("gui_vimr")
-	set linespace=1
-	set termguicolors
-	"Theme
-	colorscheme gruvbox
-	"Theme settings
-	let g:gruvbox_contrast_dark='hard'
-	let g:gruvbox_contrast_light='hard'
-
-	"Toggle dark and light
-	let hour = strftime("%H")
-	if 8 <= hour && hour < 20
-		set background=light
-	else
-		set background=dark
-	endif
-endif
+set laststatus=2
