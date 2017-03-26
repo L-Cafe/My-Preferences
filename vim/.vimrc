@@ -2,13 +2,12 @@
 scriptencoding utf-8
 set encoding=utf-8
 set fileencodings=utf-8
-filetype off
 
 "fixes
 set nocompatible
-syntax enable
 let mapleader = ","
 let g:mapleader = ","
+let maplocalleader = "m"
 
 "font
 set cursorline
@@ -44,6 +43,7 @@ set foldmethod=syntax
 set nofoldenable
 
 "vundle
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -68,12 +68,16 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'wting/rust.vim'
 Plugin 'parkr/vim-jekyll'
+Plugin 'freitass/todo.txt-vim'
+Plugin 'lervag/vimtex'
+Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end() " required
-
-filetype plugin on
-filetype indent on
+filetype plugin indent on
+if !exists("g:syntax_on")
+    syntax enable
+endif
 
 "Key bindings
 nnoremap <leader>b :NERDTreeToggle<CR>
