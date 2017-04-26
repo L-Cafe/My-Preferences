@@ -1,7 +1,8 @@
 "Visual
 set linespace=1
 set termguicolors
-set guifont=Inconsolata\ for\ Powerline\ Nerd\ Font\ Complete:h14
+"set guifont=Inconsolata\ for\ Powerline\ Nerd\ Font\ Complete:h14
+set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline\ Nerd\ Font\ Complete:h13
 set guioptions=
 "Theme
 colorscheme gruvbox

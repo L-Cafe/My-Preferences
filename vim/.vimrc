@@ -8,6 +8,7 @@ set nocompatible
 let mapleader = ","
 let g:mapleader = ","
 let maplocalleader = "m"
+let g:CtrlSpaceUseUnicode = 0
 
 "font
 set cursorline
@@ -30,6 +31,8 @@ set ignorecase
 set smartcase
 set incsearch
 set noswapfile
+set hidden
+set showtabline=0
 autocmd BufEnter * silent! lcd %:p:h
 
 "invisibles
@@ -71,6 +74,7 @@ Plugin 'parkr/vim-jekyll'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'lervag/vimtex'
 Plugin 'mattn/emmet-vim'
+Plugin 'vim-ctrlspace/vim-ctrlspace'
 
 " All of your Plugins must be added before the following line
 call vundle#end() " required
@@ -83,9 +87,15 @@ endif
 nnoremap <leader>b :NERDTreeToggle<CR>
 nnoremap <leader>p :CtrlP<CR>
 ""Other settings
+"CtrlSpace
+let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
+let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
+let g:CtrlSpaceSaveWorkspaceOnExit = 1
 "autosave
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 "Airline
 let g:airline_powerline_fonts = 1
 set laststatus=2
+"CtrlP
+let g:ctrlp_working_path_mode = 'c'
