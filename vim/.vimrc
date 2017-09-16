@@ -47,37 +47,37 @@ set nofoldenable
 
 "vundle
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'godlygeek/tabular'
-Plugin 'L-Cafe/vim-markdown'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'easymotion/vim-easymotion'
-"Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-"Plugin 'tpope/vim-abolish'
-"Plugin 'ujihisa/vimshell-ssh'
-"Plugin 'terryma/vim-multiple-cursors'
-Plugin '907th/vim-auto-save'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ctrlpvim/ctrlp.vim'
-"Plugin 'wikitopian/hardmode'
-"Plugin 'sheerun/vim-polyglot'
-"Plugin 'mbbill/undotree'
-Plugin 'morhetz/gruvbox'
-Plugin 'wting/rust.vim'
-Plugin 'parkr/vim-jekyll'
-Plugin 'freitass/todo.txt-vim'
-Plugin 'lervag/vimtex'
-Plugin 'mattn/emmet-vim'
-Plugin 'vim-ctrlspace/vim-ctrlspace'
+Plug 'scrooloose/nerdtree'
+"Plug 'godlygeek/tabular'
+Plug 'L-Cafe/vim-markdown'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'easymotion/vim-easymotion'
+"Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-abolish'
+"Plug 'ujihisa/vimshell-ssh'
+"Plug 'terryma/vim-multiple-cursors'
+Plug '907th/vim-auto-save'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'wikitopian/hardmode'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'mbbill/undotree'
+Plug 'morhetz/gruvbox'
+Plug 'wting/rust.vim'
+Plug 'parkr/vim-jekyll'
+Plug 'freitass/todo.txt-vim'
+Plug 'lervag/vimtex'
+Plug 'mattn/emmet-vim'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'Valloric/YouCompleteMe'
+Plug 'terryma/vim-multiple-cursors'
 
-" All of your Plugins must be added before the following line
-call vundle#end() " required
+" All of your Plugs must be added before the following line
+	call plug#end() " required
 filetype plugin indent on
 if !exists("g:syntax_on")
     syntax enable
@@ -99,3 +99,8 @@ let g:airline_powerline_fonts = 1
 set laststatus=2
 "CtrlP
 let g:ctrlp_working_path_mode = 'c'
+
+" Load vim-plug
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
