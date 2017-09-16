@@ -4,7 +4,9 @@
 	"font_size": 12,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Six",
+		"Vintage",
+		"Vintageous"
 	],
 	"rulers": [80],
 	"tabs_small": true,
