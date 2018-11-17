@@ -27,6 +27,5 @@ alias ssht='trezor-agent -e ed25519 -c'
 export PATH="$PATH:/opt/metasploit-framework/bin"
 
 # Other aliases
-alias help=tldr
 alias cat=bat
 alias ping="prettyping --nolegend"
