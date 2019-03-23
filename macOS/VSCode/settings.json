@@ -1,0 +1,152 @@
+{
+    "workbench.colorTheme": "Gruvbox Light (Hard)",
+    "editor.fontFamily": "Hack",
+    "editor.rulers": [
+        80
+    ],
+    "editor.lineNumbers": "relative",
+    "editor.insertSpaces": false,
+    "python.pythonPath": "/usr/local/miniconda3/bin/python",
+    "code-runner.executorMap": {
+        "python": "python3",
+    },
+    "terminal.external.osxExec": "iTerm.app",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2000,
+    // TELEMETRY SETTINGS
+    "code-runner.enableAppInsights": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    // ENDOF TELEMETRY SETTINGS
+    // GITLENS SETTINGS
+    "gitlens.views.repositories.files.layout": "tree",
+    "gitlens.views.lineHistory.enabled": true,
+    "gitlens.advanced.telemetry.enabled": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "gitlens.keymap": "chorded",
+    "gitlens.settings.mode": "advanced",
+    "gitlens.menus": {
+        "editor": {
+            "blame": true,
+            "clipboard": true,
+            "compare": true,
+            "details": true,
+            "history": true,
+            "remote": true
+        },
+        "editorGroup": {
+            "blame": true,
+            "compare": true,
+            "history": false,
+            "remote": false
+        },
+        "editorTab": {
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "explorer": {
+            "compare": true,
+            "history": true,
+            "remote": true
+        }
+    },
+    // ENDOF GITLENS SETTINGS
+    // GIT SETTINGS
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    // ENDOF GIT SETTINGS
+    // VIM SETTINGS
+    "vim.easymotion": true,
+    "vim.easymotionMarkerFontFamily": "Hack",
+    "vim.easymotionMarkerHeight": 20,
+    "vim.easymotionMarkerWidthPerChar": 11,
+    "vim.easymotionMarkerBackgroundColor": "#9B0A14",
+    "vim.easymotionMarkerForegroundColorOneChar": "#B8BB4C",
+    "vim.easymotionMarkerForegroundColorTwoChar": "#EBDBB8",
+    "vim.easymotionKeys": "hklyuiopnm,qwertzxcvbasdgjf",
+    "vim.easymotionMarkerFontSize": "14",
+    "vim.easymotionMarkerYOffset": 4,
+    "vim.leader": ",",
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    // ENDOF VIM SETTINGS
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "window.zoomLevel": 0,
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-apple-darwin",
+        "nightlyToolchain": "nightly-x86_64-apple-darwin"
+    },
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "launch":
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "(lldb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${workspaceFolder}/a.out",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [],
+                "externalConsole": true,
+                "MIMode": "lldb"
+            }
+        ]
+    },
+    "workbench.editor.swipeToNavigate": true,
+    "latex-workshop.message.update.show": false,
+    "breadcrumbs.enabled": true,
+    "nightswitch.location": "(40.3,-3.9)",
+    "nightswitch.themeDay": "Gruvbox Light (Hard)",
+    "nightswitch.themeNight": "Gruvbox Dark (Hard)",
+    "sync.gist": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "sync.autoUpload": true,
+    "sync.autoDownload": true,
+    "prolog.executablePath": "/usr/local/bin/swipl",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.largeFileOptimizations": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    // ARDUINO SETTINGS
+    "arduino.logLevel": "info",
+    "arduino.enableUSBDetection": true,
+    // Arduino + CPP settings
+    "C_Cpp.default.intelliSenseMode": "clang-x64",
+    "C_Cpp.default.includePath":
+    [
+        "/Applications/Arduino.app/Contents/Java/tools",
+        "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr",
+        "~/Documents/Arduino"
+    ],
+    "C_Cpp.default.compilerPath": "/usr/bin/clang",
+    "files.exclude": {
+        "_site/": true
+    },
+    "shareCode.pastebin.username": "",
+    "explorer.confirmDragAndDrop": false,
+    // ENDOF ARDUINO SETTINGS
+    // EMMET SETTINGS
+    "emmet.includeLanguages": {
+        "jekyll": "html"
+    }
+    // ENDOF EMMET SETTINGS
+}
